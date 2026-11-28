@@ -12,13 +12,16 @@ covered many of the predicted dates.
 ## Result (graded 2026-11-25, see [GRADING.md](GRADING.md))
 
 - **The 235.587-day period is excluded.** It required an eclipse on 2025-09-24; TESS Sector 97 shows
-  the star flat to about 0.3% all that night, and every trial period within +- 0.10 d is ruled out.
-- **The 290.230-day period stays open** (81% of its window allowed). Its next clean test is
-  21-24 December 2027.
+  the star flat to about 0.6% all that night (30-minute bins between 0.9944 and 1.0063), and every
+  trial period within +- 0.10 d is ruled out.
+- **The 290.230-day period stays open** (81% of its window allowed). Its next tests are
+  6-9 March 2027 and 21-24 December 2027.
 - 52.9% of all periods from 60 to 1500 d are now excluded, against 28.4% with data to early 2021.
-- No credible second eclipse: three flagged events look like scattered light and a bad ground image.
-  A pre-registered pixel-level check ([AMENDMENT-2026-11-25-pixvet.md](AMENDMENT-2026-11-25-pixvet.md))
-  is queued to settle them.
+- **No second eclipse.** The pre-registered pixel-level check of the three flagged TESS dips
+  ([AMENDMENT-2026-11-25-pixvet.md](AMENDMENT-2026-11-25-pixvet.md), graded 2026-11-28 in
+  [GRADING-pixvet.md](GRADING-pixvet.md), output in `results/pixvet-v0.1.0/`) passed its controls and
+  found none of them on the target (overall label `MIXED`: two `SYSTEMATIC`, one `UNCLEAR`, none
+  `ON_TARGET`). The ground event is a bad image.
 
 Raw outputs: `results/v0.1.0/`. Rules: [PREREGISTRATION.md](PREREGISTRATION.md), fixed on 2026-11-24
 before the analysis ran.

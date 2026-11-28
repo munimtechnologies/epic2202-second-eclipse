@@ -1,0 +1,42 @@
+===== setup-01-pip: pip install numpy astropy
+Collecting numpy
+  Downloading numpy-2.5.5-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+Collecting astropy
+  Downloading astropy-8.0.3-cp311-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (11 kB)
+Collecting astropy-iers-data>=0.2026.10.19.0.52.1 (from astropy)
+  Downloading astropy_iers_data-0.2026.11.23.0.35.53-py3-none-any.whl.metadata (3.2 kB)
+Collecting packaging>=25.0 (from astropy)
+  Downloading packaging-26.4-py3-none-any.whl.metadata (3.5 kB)
+Collecting pyerfa>=2.0.1.3 (from astropy)
+  Downloading pyerfa-2.0.1.5-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.7 kB)
+Collecting PyYAML>=6.0.0 (from astropy)
+  Downloading pyyaml-6.0.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.3 kB)
+Downloading numpy-2.5.5-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (15.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 15.7/15.7 MB 27.6 MB/s eta 0:00:00
+Downloading astropy-8.0.3-cp311-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (10.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.4/10.4 MB 27.6 MB/s eta 0:00:00
+Downloading astropy_iers_data-0.2026.11.23.0.35.53-py3-none-any.whl (2.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 17.4 MB/s eta 0:00:00
+Downloading packaging-26.4-py3-none-any.whl (140 kB)
+Downloading pyerfa-2.0.1.5-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (738 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 738.7/738.7 kB 7.4 MB/s eta 0:00:00
+Downloading pyyaml-6.0.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (849 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 849.2/849.2 kB 9.0 MB/s eta 0:00:00
+Installing collected packages: PyYAML, packaging, numpy, astropy-iers-data, pyerfa, astropy
+Successfully installed PyYAML-6.0.4 astropy-8.0.3 astropy-iers-data-0.2026.11.23.0.35.53 numpy-2.5.5 packaging-26.4 pyerfa-2.0.1.5
+
+===== run-01-python: python -m unittest -v test_pixvet
+
+===== run-02-python: python job_pixvet.py --data-dir /data --out-dir /out
+[23:53:44] sector 30 cutout: ['tess-s0030-1-3_17.731554_0.314032_21x21_astrocut.fits']
+[23:53:44] sector 30: 220 good cadences kept near events
+[23:53:44] S30_2459127.00: {"label": "SYSTEMATIC", "depth_aperture": 0.10394249868298644, "depth_peak": 0.06171600283647127, "ratio_peak": 0.5937513877235, "corr_psf": 0.17945582028892804, "bkg_change_equiv": 23.026096059336986, "control_median_depth": 3.0958465523765173}
+[23:53:44] S30_2459127.53: {"label": "SYSTEMATIC", "depth_aperture": 0.043042495499790334, "depth_peak": 0.02536195455459478, "ratio_peak": 0.5892305792241604, "corr_psf": 0.34003787721274825, "bkg_change_equiv": 16.89749876263938, "control_median_depth": 0.08184634621859938}
+[23:53:48] sector 42 cutout: ['tess-s0042-3-2_17.731554_0.314032_21x21_astrocut.fits']
+[23:53:48] sector 42: 144 good cadences kept near events
+[23:53:48] S42_2459456.12: {"label": "UNCLEAR", "depth_aperture": 0.07022734173961609, "depth_peak": 0.04457240349754743, "ratio_peak": 0.6346873225361398, "corr_psf": 0.31244090085683635, "bkg_change_equiv": 24.124870227717604, "control_median_depth": -0.1661862775415769}
+[23:54:00] sector 97 cutout: ['tess-s0097-1-4_17.731554_0.314032_21x21_astrocut.fits']
+[23:54:00] sector 97: 432 good cadences kept near events
+[23:54:00] S97_negative: {"label": "REPRO_FAIL", "depth_aperture": -0.002442627804473574, "depth_peak": -0.00210711807389119, "ratio_peak": 0.8626439402810729, "corr_psf": -0.3178174837930345, "bkg_change_equiv": -6.741843322490503e-05, "control_median_depth": 0.005309825952246716}
+[23:54:00] S97_positive: {"label": "ON_TARGET", "depth_aperture": 0.09754372174950598, "depth_peak": 0.09788373642419979, "ratio_peak": 1.0034857668806914, "corr_psf": 0.9962526775003803, "bkg_change_equiv": -6.741843322490503e-05, "control_median_depth": 0.005309825952246716}
+[23:54:00] OUTCOME gate=CONTROLS_OK overall=MIXED labels={'S30_2459127.00': 'SYSTEMATIC', 'S30_2459127.53': 'SYSTEMATIC', 'S42_2459456.12': 'UNCLEAR'}
